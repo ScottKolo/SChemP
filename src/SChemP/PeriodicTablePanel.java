@@ -155,7 +155,7 @@ public class PeriodicTablePanel extends JPanel
 		String[] options = {"None", "Atomic Number", "Atomic Mass", "Atomic Volume", "Boiling Point", "Melting Point",
 			"Specific Heat Capacity", "Density", "Electronegativity", "Atomic Radius", "Ionization Potential",
 			"Thermal Conductivity", "Heat of Fusion", "Heat of Vaporization", "Covalent Radius"};
-		JComboBox sortOptions = new JComboBox(options);
+		JComboBox<String> sortOptions = new JComboBox<String>(options);
 		sortOptions.setPreferredSize(new Dimension(150, 30));
 		
 		ScalePanel sortColors = new ScalePanel();

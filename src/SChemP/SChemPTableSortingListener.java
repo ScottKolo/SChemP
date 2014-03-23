@@ -22,13 +22,16 @@ public class SChemPTableSortingListener implements ActionListener
 	
 	public void actionPerformed(ActionEvent e)
 	{
-		JComboBox cb = (JComboBox)e.getSource();
-        property = (String)cb.getSelectedItem();
-        try{
-        	table.setColorSort(property, log);
-    		scale.setProperty(property);
-        }
-		catch(SChemPException se){}
+		Object src = e.getSource();
+		if (src instanceof JComboBox<?>) {
+			JComboBox<?> cb = (JComboBox<?>)src;
+	        property = (String)cb.getSelectedItem();
+	        try{
+	        	table.setColorSort(property, log);
+	    		scale.setProperty(property);
+	        }
+			catch(SChemPException se){}
+		}
 	}
 	
 	public void refresh()

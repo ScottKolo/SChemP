@@ -406,7 +406,7 @@ public class QuantumOrbitalsPanel extends JPanel
 		double angleIncrement = .6;
 		
 		ArrayList<Triplet> orbitalArray = new ArrayList<Triplet>();
-		int counter = 0;
+		//int counter = 0;
 		Random rand = new Random();
 		
 		for(double k = radiusIncrement; k < maxRadius; k += radiusIncrement)
@@ -416,7 +416,7 @@ public class QuantumOrbitalsPanel extends JPanel
 				Point3D cart = sphericalToCartesian(new Point3D(k, angle, PI/2.0));
 				orbitalArray.add(new Triplet(cart.x, cart.y, ((psi.getL() == 0)?4*PI:1)*pow(k,2)*pow(psi.calculateWavefunction(k, angle, 0),2)));//pow(psi.calculateWavefunction(k, angle, 0),2)));
 				
-				counter++;
+				//counter++;
 			}
 		}
 		

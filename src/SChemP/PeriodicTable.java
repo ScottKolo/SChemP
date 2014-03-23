@@ -307,7 +307,7 @@ public class PeriodicTable
 	{
 		Element e = null;
 		
-		Map table = getTable(property);
+		Map<Object,Element> table = getTable(property);
 		
 		if(table == null)
 			return null;
@@ -353,7 +353,7 @@ public class PeriodicTable
 	{
 		double high = 0;
 		
-		HashMap propertyTable = getTable(property);
+		HashMap<Object,Element> propertyTable = getTable(property);
 		if(propertyTable == null)
 			return 1;
 		
@@ -377,7 +377,7 @@ public class PeriodicTable
 	{
 		double low = 0;
 		
-		HashMap propertyTable = getTable(property);
+		HashMap<Object,Element> propertyTable = getTable(property);
 		if(propertyTable == null)
 			return 1;
 		

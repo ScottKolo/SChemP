@@ -114,7 +114,7 @@ class BohrRenderer implements ElementRenderer
 			// token holds the separated electron configuration
 			// (Each token is in the format of "1s2")
 			StringTokenizer token = new StringTokenizer(config);
-			int totalElectrons = 0;
+			//int totalElectrons = 0;
 			level = 0;
 			
 			int[] numPerLevel = new int[token.countTokens()];
@@ -135,7 +135,7 @@ class BohrRenderer implements ElementRenderer
 				electronData[count][2] = numE;
 				count++;
 				
-				totalElectrons += numE;
+				//totalElectrons += numE;
 				//System.out.println(level-1 + " e: " + numE);
 				numPerLevel[level-1] += numE;
 				

@@ -5,14 +5,14 @@ import java.awt.Frame;
 import java.awt.GraphicsConfiguration;
 import java.awt.Rectangle;
 
-import javax.swing.ButtonGroup;
+//import javax.swing.ButtonGroup;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
+//import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JRadioButtonMenuItem;
+//import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTabbedPane;
-import javax.swing.UIManager;
+//import javax.swing.UIManager;
 
 public class SChemPCore
 {
@@ -140,7 +140,7 @@ public class SChemPCore
 	
 	private JMenuBar setUpMenu()
 	{
-		SChemPMenuListener listener = new SChemPMenuListener(frame);
+		//SChemPMenuListener listener = new SChemPMenuListener(frame);
 		
 		// New MenuBar
 		JMenuBar menubar = new JMenuBar();

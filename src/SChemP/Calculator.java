@@ -317,6 +317,7 @@ public class Calculator
 			}
 		}
 		
+		/*
 		int parCount = 0;
 		for(int k = 0; k < temp.length(); k++)
 		{
@@ -325,7 +326,7 @@ public class Calculator
 				parCount++;
 			}
 		}
-		
+		*/
 		StringTokenizer token = new StringTokenizer(temp.toString(),"abcdefghijklmnopqrstuvwxyz+-*/!^%()[]",true);
 		while(token.hasMoreTokens())
 		{

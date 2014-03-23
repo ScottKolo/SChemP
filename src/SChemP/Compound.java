@@ -66,15 +66,17 @@ public class Compound implements Compoundable{
 			System.out.println("Parse: "+ compoundString);
 		ArrayList<Compoundable> elementArray = new ArrayList<Compoundable>();
 		ArrayList<Integer> subscriptArray = new ArrayList<Integer>();
-		int numElements = 0;
+		//int numElements = 0;
+		/*
 		for(int k = 0; k < compoundString.length(); k++)
 		{
 			if(Character.isUpperCase(compoundString.charAt(k)))
-				numElements++;
+				//numElements++;
 		}
+		*/
 		String temp = "";
-		int elementIndex = 0;
-		int subscriptIndex = 0;
+		//int elementIndex = 0;
+		//int subscriptIndex = 0;
 		int openBrackets = 0;
 		int charge = 0;
 		
@@ -87,23 +89,23 @@ public class Compound implements Compoundable{
 				{
 					elementArray.add(new Atom(PeriodicTable.getElement(temp, "SYMBOL")));
 					temp = "";
-					elementIndex++;
+					//elementIndex++;
 					subscriptArray.add(new Integer(1));
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 				else if(Character.isLowerCase(compoundString.charAt(k)))
 				{
 					elementArray.add(new Atom(PeriodicTable.getElement(temp, "SYMBOL")));
 					temp = "";
-					elementIndex++;
+					//elementIndex++;
 					subscriptArray.add(new Integer(1));
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 				else if(Character.isDigit(compoundString.charAt(k)))
 				{
 					subscriptArray.add(new Integer(temp));
 					temp = "";
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 			}
 			else if(Character.isUpperCase(compoundString.charAt(k)))
@@ -112,7 +114,7 @@ public class Compound implements Compoundable{
 				{
 					elementArray.add(new Atom(PeriodicTable.getElement(temp, "SYMBOL")));
 					temp = "";
-					elementIndex++;
+					//elementIndex++;
 				}
 				else if(Character.isUpperCase(compoundString.charAt(k+1)) ||
 						compoundString.charAt(k+1) == '(' ||
@@ -121,9 +123,9 @@ public class Compound implements Compoundable{
 				{
 					elementArray.add(new Atom(PeriodicTable.getElement(temp, "SYMBOL")));
 					temp = "";
-					elementIndex++;
+					//elementIndex++;
 					subscriptArray.add(new Integer(1));
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 			}
 			else if(Character.isLowerCase(compoundString.charAt(k)))
@@ -132,7 +134,7 @@ public class Compound implements Compoundable{
 				{
 					elementArray.add(new Atom(PeriodicTable.getElement(temp, "SYMBOL")));
 					temp = "";
-					elementIndex++;
+					//elementIndex++;
 				}
 				else if(Character.isUpperCase(compoundString.charAt(k+1)) ||
 						compoundString.charAt(k+1) == '(' ||
@@ -141,9 +143,9 @@ public class Compound implements Compoundable{
 				{
 					elementArray.add(new Atom(PeriodicTable.getElement(temp, "SYMBOL")));
 					temp = "";
-					elementIndex++;
+					//elementIndex++;
 					subscriptArray.add(new Integer(1));
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 			}
 			else if(Character.isDigit(compoundString.charAt(k)))
@@ -152,14 +154,14 @@ public class Compound implements Compoundable{
 				{
 					subscriptArray.add(new Integer(temp));
 					temp = "";
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 				else if(compoundString.charAt(k+1) == '(' ||
 					compoundString.charAt(k+1) == '[')
 				{
 					subscriptArray.add(new Integer(temp));
 					temp = "";
-					subscriptIndex++;
+					//subscriptIndex++;
 				}
 				else if(Character.isLowerCase(compoundString.charAt(k+1)))
 					throw new SChemPException("No Such Element Error: Elements Must Start With Capital Letters");
@@ -200,7 +202,7 @@ public class Compound implements Compoundable{
 				{
 					subscriptArray.add(new Integer(1));
 				}
-				elementIndex++;
+				//elementIndex++;
 				temp = "";
 			}
 			else if(compoundString.charAt(k) == '{')
