@@ -84,8 +84,8 @@ public class EquationPanel extends JPanel
 		Rectangle2D stringBounds = (g2.getFont().deriveFont((float)46)).getStringBounds(text,g2.getFontRenderContext());
 		Rectangle panelBounds = displayPanel.getVisibleRect();
 		
-		System.out.println(stringBounds.getWidth());
-		System.out.println(panelBounds.getWidth());
+		//System.out.println(stringBounds.getWidth());
+		//System.out.println(panelBounds.getWidth());
 		
 		if(stringBounds.getWidth() <= panelBounds.getWidth())
 		{
@@ -129,7 +129,7 @@ public class EquationPanel extends JPanel
 		}
 
 		real.append("</center></html>");
-		System.out.println(real.toString());
+		//System.out.println(real.toString());
 		label.setText(real.toString());
 		//label = new SmoothLabel(real.toString());
 	}
